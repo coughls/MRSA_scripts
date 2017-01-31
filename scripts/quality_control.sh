@@ -25,7 +25,7 @@ mkdir TRIMMED #directory for output files
 for i in $(ls *.fastq | rev | cut -c 19- | rev | uniq)
 do
 echo "$i"
-java -jar trimmomatic-0.32.jar  PE -threads 12 -phred33 -trimlog ${i}.log ${i}_L001_R1_001.fastq ${i}_L001_R2_001.fastq TRIMMED/${i}_L001_R1_001_paired.fastq TRIMMED/${i}_L001_R1_001_unpaired.fastq TRIMMED/${i}_L001_R2_001_paired.fastq TRIMMED/${i}_L001_R2_001_unpaired.fastq ILLUMINACLIP:/home/simone/software/Trimmomatic-0.32/adapters/NexteraPE-PE.fa:2:30:10 LEADING:$l TRAILING:$l SLIDINGWINDOW:$w:$l MINLEN:$minlen
+java -jar trimmomatic-0.32.jar  PE -threads 12 -phred33 -trimlog ${i}.log ${i}_L001_R1_001.fastq ${i}_L001_R2_001.fastq TRIMMED/${i}_L001_R1_001_paired.fastq TRIMMED/${i}_L001_R1_001_unpaired.fastq TRIMMED/${i}_L001_R2_001_paired.fastq TRIMMED/${i}_L001_R2_001_unpaired.fastq ILLUMINACLIP:Trimmomatic-0.32/adapters/NexteraPE-PE.fa:2:30:10 LEADING:$l TRAILING:$l SLIDINGWINDOW:$w:$l MINLEN:$minlen
 done
 
 ##Get some other quality metrics
