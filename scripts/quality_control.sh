@@ -3,6 +3,7 @@
 #Trimmomatic
 #fastx_quality_stats fromn the FASTX toolit
 #get_seq_len_fastq_2.py #(in this repository) 
+#read_stats.py
 
 
 #Run FASTQC
@@ -47,3 +48,14 @@ for fastq_file in *.fastq
 do
 quality_metrics $fastq_file
 done
+
+
+cd LENS
+#read_stats.txt contains information on read length in each file of that directory -files must end in .lens for the script to work
+./read_stats.py > read_stats.txt
+
+#zip up all files
+gzip *.lens &
+cd ../QUALSTATS
+gzip *.qualstats &
+
