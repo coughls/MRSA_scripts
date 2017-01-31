@@ -3,7 +3,8 @@
 #Requires these tools:
 #FASTQC
 #Trimmomatic
-#fastx_quality_stats fromn the FASTX toolit
+#fastx_quality_stats from the FASTX toolit
+#and scripts:
 #get_seq_len_fastq_2.py #(in this repository) 
 #read_stats.py (in this repository)
 
@@ -35,7 +36,7 @@ mkdir QUALSTATS
 #make function to calculate quality statistics
 quality_metrics(){
 #Q of 33 needs to be changed for some files produced by different sequencers -fastqc can tell the illumina/solexa etc file type and googling will retrieve its phred qua
-  lity encoding for that file type. Important that this is correct as the wrong phred encoding will mean your quality scores make no sense!
+#lity encoding for that file type. Important that this is correct as the wrong phred encoding will mean your quality scores make no sense!
 local file=$1
 
 echo "Running quality stats on $i"
