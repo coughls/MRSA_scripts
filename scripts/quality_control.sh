@@ -1,9 +1,11 @@
+#!/usr/bin/env 
+
 #Requires these tools:
 #FASTQC
 #Trimmomatic
 #fastx_quality_stats fromn the FASTX toolit
 #get_seq_len_fastq_2.py #(in this repository) 
-#read_stats.py
+#read_stats.py (in this repository)
 
 
 #Run FASTQC
