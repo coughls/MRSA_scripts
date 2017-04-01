@@ -8,7 +8,7 @@
 ....
 
 #output file format
-(filename average_read_length median_read_length minimum_read_length maximum_read_length number_of_reads standard_deviation_of_read_lengths
+#(filename average_read_length median_read_length minimum_read_length maximum_read_length number_of_reads standard_deviation_of_read_lengths
 
 #Usage ./read_stats.py.py inputfile.txt outfile.txt
 
